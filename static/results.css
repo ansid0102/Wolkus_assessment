@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 16px;
+    background-color: black;
+    color: white;
+    font-variant: small-caps;
+    height: fit-content;
+    align-items: center;
+}
+header h1{
+    padding-top: 9px;
+}
+
+header div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2px;
+    column-gap: 12px;
+}
+
+#Logout{
+    font-variant: normal;
+    text-decoration: none;
+    color: black;
+    margin-top: 10;
+    cursor: pointer;
+    background-color: cadetblue;
+    font-size: 20px;
+    padding: 8px;
+    text-align: center;
+}
+
+#Logout:hover{
+    background: #06c3dd;
+
+}
+
+header div p{
+    padding: 9px;
+    font-variant: none;
+}
+
+header input[type=text]{
+    padding: 6px;
+    border:none;
+    font-size:17px ;
+}
+
+
+#main{
+    padding: 20px;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(3,1.5fr);
+    column-gap: 250px;
+    width: 900px;
+    list-style: none;
+}
+.movie_result{
+    padding: 30px;
+    width: 275px;
+    /* height: 75px; */
+    /* margin-top: 10px; */
+    /* margin-right:10px ; */
+    /* display: inline-block; */
+    /* visibility: hidden; */
+}
+
+.movie_result form button{
+    background-color: cadetblue;
+    font-size: large;
+    padding: 5px;
+}
+
+.movie_result form button:hover{
+    content: "Add";
+    width: fit-content;
+    background-color: #06c3dd;
+}

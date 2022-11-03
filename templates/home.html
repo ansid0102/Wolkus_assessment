@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineList-Home</title>
+    <link rel="stylesheet" href="/static/home.css">
+</head>
+<body>
+    <header>
+        <h1>CineList</h1>
+        <!-- <input type="text" placeholder="Search.."> -->
+        <div>
+            <p>{{username}}</p>
+            <a href="{{url_for('logout')}}" id="Logout">Log Out</a>
+        </div>
+    </header>
+    <div id="main">
+        <div id="List">
+            <h2>Add New List</h2>
+        </div>
+        <form action="/search"  class="search-block" method="post">
+            <input type="text" name="query" id="query" placeholder="Search movies...">
+            <button class="btn" type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

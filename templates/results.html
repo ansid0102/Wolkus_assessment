@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineList Search</title>
+    <link rel="stylesheet" href="/static/results.css">
+</head>
+<body>
+    <header>
+        <h1>CineList </h1>
+        <!-- <input type="text" placeholder="Search.."> -->
+        <div>
+            <p>{{username}}</p>
+            <a href="{{url_for('logout')}}" id="Logout">Log Out</a>
+        </div>
+    </header>
+    <div id="main">
+    <h1>Search Results for {{query}}</h1>
+    <ul>
+        {%for s in result["Search"]%}
+       <li>
+        
+        <div class="movie_result">
+            <h1>{{s["Title"]}}</h1>
+            <h2 style="color:red;">{{s["Year"]}}</h2>
+            <img src="{{s['Poster']}}">
+            <form action="/addList" method="post"> 
+                <button type="submit" name="btn" value="{{s['imdbId']}}">Add</button>
+            </form>
+            <h2>{{msg}}</h2>
+        </div>
+        
+        </li>
+        {%endfor%}
+    </ul>
+</div>
+</body>
+</html>

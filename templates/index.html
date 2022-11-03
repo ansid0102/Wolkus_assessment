@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineList</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>CineList</h1>
+    </header>
+    <main>
+    <div id="content">
+        <h1>Welcome to CineList</h1> 
+        <p>A place where you can create your own movie lists.
+            <br><b>Login/Register</b> to Get Started</p>
+
+    </div>
+    <div id="login">
+    <form action='/' method="post">
+            <h1>Login</h1>
+            <br>
+            <label for="username">Username</label>
+            <br>
+            <input type="text" id="uname" name="username" placeholder="example: abc" required>
+            <br><br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" id="password" name="password">
+            <br>
+            <p>{{msg}}</p>
+            <button>Submit</button>
+            <br>
+            <br>
+            <a href="{{url_for('register')}}">New? Register here</a>
+    </form>
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
